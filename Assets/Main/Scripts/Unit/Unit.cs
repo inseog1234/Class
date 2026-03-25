@@ -10,6 +10,7 @@ public class Unit : MonoBehaviour
     [SerializeField] protected float MaxHp;
 
     [Header("Unit - 유닛 설정")]
+    [SerializeField] protected float Gravity;
     [SerializeField] protected float moveSpeed;
     [SerializeField] protected float jumpForce;
     [SerializeField] protected float lifeTime;
@@ -22,6 +23,7 @@ public class Unit : MonoBehaviour
 
     private void Awake()
     {
+        rb.gravityScale = Gravity;
         Hp = MaxHp;
     }
 
